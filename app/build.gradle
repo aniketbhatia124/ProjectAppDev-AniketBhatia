@@ -1,0 +1,317 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+
+sceneform.asset('sampledata/ArcticFox_Posed.obj',
+        'default',
+        'sampledata/ArcticFox_Posed.sfa',
+        'src/main/assets/ArcticFox_Posed.sfb')
+//Beds
+sceneform.asset('sampledata/Home and furniture/Beds/Bed1/Bed1.obj',
+        'default',
+        'sampledata/Home and furniture/Beds/Bed1/Bed1.sfa',
+        'src/main/assets/Bed1.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Beds/Bed2/Bed2.obj',
+        'default',
+        'sampledata/Home and furniture/Beds/Bed2/Bed2.sfa',
+        'src/main/assets/Bed2.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Beds/Bed3/Bed3.obj',
+        'default',
+        'sampledata/Home and furniture/Beds/Bed3/Bed3.sfa',
+        'src/main/assets/Bed3.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Beds/Bed4/Cabana.obj',
+        'default',
+        'sampledata/Home and furniture/Beds/Bed4/Cabana.sfa',
+        'src/main/assets/Cabana.sfb')
+
+//Cupboards
+sceneform.asset('sampledata/Home and furniture/Cupboards/Cupboard1/Cupb1.obj',
+        'default',
+        'sampledata/Home and furniture/Cupboards/Cupboard1/Cupb1.sfa',
+        'src/main/assets/Cupb1.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Cupboards/Cupboard2/Cupb2.obj',
+        'default',
+        'sampledata/Home and furniture/Cupboards/Cupboard2/Cupb2.sfa',
+        'src/main/assets/Cupb2.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Cupboards/Cupboard3/Cupb3.gltf',
+        'default',
+        'sampledata/Home and furniture/Cupboards/Cupboard3/Cupb3.sfa',
+        'src/main/assets/Cupb3.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Cupboards/Cupboard4/Cupb4.gltf',
+        'default',
+        'sampledata/Home and furniture/Cupboards/Cupboard4/Cupb4.sfa',
+        'src/main/assets/Cupb4.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Cupboards/Cupboard5/Cupb5.gltf',
+        'default',
+        'sampledata/Home and furniture/Cupboards/Cupboard5/Cupb5.sfa',
+        'src/main/assets/Cupb5.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Cupboards/Cupboard6/Cupb6.gltf',
+        'default',
+        'sampledata/Home and furniture/Cupboards/Cupboard6/Cupb6.sfa',
+        'src/main/assets/Cupb6.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Cupboards/Cupboard7/Cupb7.gltf',
+        'default',
+        'sampledata/Home and furniture/Cupboards/Cupboard7/Cupb7.sfa',
+        'src/main/assets/Cupb7.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Cupboards/Cupboard8/Cupb8.obj',
+        'default',
+        'sampledata/Home and furniture/Cupboards/Cupboard8/Cupb8.sfa',
+        'src/main/assets/Cupb8.sfb')
+
+//Dining Sets
+
+sceneform.asset('sampledata/Home and furniture/Dining Sets/DiningSet0/DiningSet0.gltf',
+        'default',
+        'sampledata/Home and furniture/Dining Sets/DiningSet0/DiningSet0.sfa',
+        'src/main/assets/DiningSet0.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Sets/DiningSet1/DiningSet1.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Sets/DiningSet1/DiningSet1.sfa',
+        'src/main/assets/DiningSet1.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Sets/DiningSet2/DiningSet2.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Sets/DiningSet2/DiningSet2.sfa',
+        'src/main/assets/DiningSet2.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Sets/DiningSet3/DiningSet3.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Sets/DiningSet3/DiningSet3.sfa',
+        'src/main/assets/DiningSet3.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Sets/DiningSet4/DiningSet4.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Sets/DiningSet4/DiningSet4.sfa',
+        'src/main/assets/DiningSet4.sfb')
+
+
+sceneform.asset('sampledata/Home and furniture/Dining Sets/DiningSet6/DiningSet6.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Sets/DiningSet6/DiningSet6.sfa',
+        'src/main/assets/DiningSet6.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Sets/DiningSet7/DiningSet7.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Sets/DiningSet7/DiningSet7.sfa',
+        'src/main/assets/DiningSet7.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Sets/DiningSet8/DiningSet8.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Sets/DiningSet8/DiningSet8.sfa',
+        'src/main/assets/DiningSet8.sfb')
+
+//Dining Tables
+sceneform.asset('sampledata/Home and furniture/Dining Tables/DiningTable1/DiningTable1.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Tables/DiningTable1/DiningTable1.sfa',
+        'src/main/assets/DiningTable1.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Tables/DiningTable2/DiningTable2.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Tables/DiningTable2/DiningTable2.sfa',
+        'src/main/assets/DiningTable2.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Tables/DiningTable3/DiningTable3.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Tables/DiningTable3/DiningTable3.sfa',
+        'src/main/assets/DiningTable3.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Tables/DiningTable4/DiningTable4.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Tables/DiningTable4/DiningTable4.sfa',
+        'src/main/assets/DiningTable4.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Dining Tables/DiningTable5/DiningTable5.obj',
+        'default',
+        'sampledata/Home and furniture/Dining Tables/DiningTable5/DiningTable5.sfa',
+        'src/main/assets/DiningTable5.sfb')
+
+//Dining Chairs
+sceneform.asset('sampledata/Home and furniture/DiningChair/Armchair1/Armchair1.obj',
+        'default',
+        'sampledata/Home and furniture/DiningChair/Armchair1/Armchair1.sfa',
+        'src/main/assets/Armchair1.sfb')
+
+sceneform.asset('sampledata/Home and furniture/DiningChair/Armchair2/Armchair2.obj',
+        'default',
+        'sampledata/Home and furniture/DiningChair/Armchair2/Armchair2.sfa',
+        'src/main/assets/Armchair2.sfb')
+
+sceneform.asset('sampledata/Home and furniture/DiningChair/Chair1/Chair1.obj',
+        'default',
+        'sampledata/Home and furniture/DiningChair/Chair1/Chair1.sfa',
+        'src/main/assets/Chair1.sfb')
+sceneform.asset('sampledata/Home and furniture/DiningChair/Chair3/Chair3.obj',
+        'default',
+        'sampledata/Home and furniture/DiningChair/Chair3/Chair3.sfa',
+        'src/main/assets/Chair3.sfb')
+sceneform.asset('sampledata/Home and furniture/DiningChair/Chair4/Chair4.obj',
+        'default',
+        'sampledata/Home and furniture/DiningChair/Chair4/Chair4.sfa',
+        'src/main/assets/Chair4.sfb')
+sceneform.asset('sampledata/Home and furniture/DiningChair/Chair5/Chair5.obj',
+        'default',
+        'sampledata/Home and furniture/DiningChair/Chair5/Chair5.sfa',
+        'src/main/assets/Chair5.sfb')
+
+//Miscellanous
+
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Bedsidetable/BedsideTable.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Bedsidetable/BedsideTable.sfa',
+        'src/main/assets/BedsideTable.sfb')
+
+
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Desk1/Desk1.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Desk1/Desk1.sfa',
+        'src/main/assets/Desk1.sfb')
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Desk2/Desk2.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Desk2/Desk2.sfa',
+        'src/main/assets/Desk2.sfb')
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Desk3/Desk3.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Desk3/Desk3.sfa',
+        'src/main/assets/Desk3.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Fan1/Fan1.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Fan1/Fan1.sfa',
+        'src/main/assets/Fan1.sfb')
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Fan2/Fan2.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Fan2/Fan2.sfa',
+        'src/main/assets/Fan2.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Kitchen1/Kitchen1.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Kitchen1/Kitchen1.sfa',
+        'src/main/assets/Kitchen1.sfb')
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Kitchen2/Kitchen2.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Kitchen2/Kitchen2.sfa',
+        'src/main/assets/Kitchen2.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Piano/Piano.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Piano/Piano.sfa',
+        'src/main/assets/Piano.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Stove/Stove.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Stove/Stove.sfa',
+        'src/main/assets/Stove.sfb')
+sceneform.asset('sampledata/Home and furniture/Miscellanous/TV/TV.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/TV/TV.sfa',
+        'src/main/assets/TV.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Miscellanous/Washing Machine/Washing Machine.obj',
+        'default',
+        'sampledata/Home and furniture/Miscellanous/Washing Machine/Washing Machine.sfa',
+        'src/main/assets/Washing Machine.sfb')
+
+//Sofa
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa1/Sofa1.obj',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa1/Sofa1.sfa',
+        'src/main/assets/Sofa1.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa2/Sofa2.obj',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa2/Sofa2.sfa',
+        'src/main/assets/Sofa2.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa3/Sofa3.gltf',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa3/Sofa3.sfa',
+        'src/main/assets/Sofa3.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa4/Sofa4.gltf',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa4/Sofa4.sfa',
+        'src/main/assets/Sofa4.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa6/Sofa6.gltf',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa6/Sofa6.sfa',
+        'src/main/assets/Sofa6.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa7/Sofa7.gltf',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa7/Sofa7.sfa',
+        'src/main/assets/Sofa7.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa8/Sofa8.gltf',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa8/Sofa8.sfa',
+        'src/main/assets/Sofa8.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa9/Sofa9.gltf',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa9/Sofa9.sfa',
+        'src/main/assets/Sofa9.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa10/Sofa10.gltf',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa10/Sofa10.sfa',
+        'src/main/assets/Sofa10.sfb')
+
+sceneform.asset('sampledata/Home and furniture/Sofa/Sofa11/Sofa11.obj',
+        'default',
+        'sampledata/Home and furniture/Sofa/Sofa11/Sofa11.sfa',
+        'src/main/assets/Sofa11.sfb')
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.android.homedesignar"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.google.ar:core:1.18.0'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

@@ -1,0 +1,91 @@
+# File produced by AccuTrans 3D
+
+newmtl Candle
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.8196 0.451 0.2706
+  Ka 0.8196 0.451 0.2706
+  Ks 0.898 0.898 0.898
+
+newmtl Candle1
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.6588 0.2784 0.2588
+  Ka 0.6588 0.2784 0.2588
+  Ks 0.898 0.898 0.898
+
+newmtl Candle1_1
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.9804 0.3686 0.1882
+  Ka 0.9804 0.3686 0.1882
+  Ks 0.898 0.898 0.898
+
+newmtl Candle2
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.9412 0.7843 0.4157
+  Ka 0.9412 0.7843 0.4157
+  Ks 0.898 0.898 0.898
+
+newmtl Candle2_1
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.9804 0.3686 0.1882
+  Ka 0.9804 0.3686 0.1882
+  Ks 0.898 0.898 0.898
+
+newmtl Candle_1
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.9804 0.3686 0.1882
+  Ka 0.9804 0.3686 0.1882
+  Ks 0.898 0.898 0.898
+
+newmtl Dining_Tab
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 0.8902 0.8549 0.7176
+  Ka 0.8902 0.8549 0.7176
+  Ks 0.898 0.898 0.898
+
+newmtl Dining_Tab_1
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.9059 0.7059 0.4392
+  Ka 0.9059 0.7059 0.4392
+  Ks 0.898 0.898 0.898
+  map_Kd E:\EARTH.jpg
+
+newmtl Persian_Ru
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.8196 0.6118 0.4314
+  Ka 0.8196 0.6118 0.4314
+  Ks 0.898 0.898 0.898
+  map_Kd E:\ORANGE-R.jpg
+
+newmtl Wrought_Ir
+  Ns 35.29
+  d 1.0
+  illum 2
+  Kd 0.7412 0.7176 0.6824
+  Ka 0.7412 0.7176 0.6824
+  Ks 0.898 0.898 0.898
+
+newmtl Wrought_Ir_1
+  Ns 79.74
+  d 0.7
+  illum 2
+  Kd 0.9176 0.9176 0.9176
+  Ka 0.9176 0.9176 0.9176
+  Ks 0.898 0.898 0.898

@@ -1,0 +1,76 @@
+{
+  materials: [
+    {
+      name: 'lambert3SG',
+      parameters: [
+        {
+          baseColor: 'Clothes dryer Texture',
+        },
+        {
+          baseColorTint: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'lambert4SG',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.5,
+            0.5,
+            0.5,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/Home and furniture/Miscellanous/Washing Machine/Washing Machine.obj',
+    name: 'Washing Machine',
+    recenter: 'root',
+    scale: 0.0043200000000000001,
+  },
+  samplers: [
+    {
+      file: 'sampledata/Home and furniture/Miscellanous/Washing Machine/Clothes dryer Texture.png',
+      name: 'Clothes dryer Texture',
+      pipeline_name: 'Clothes dryer Texture.png',
+    },
+  ],
+  version: '0.54:2',
+}

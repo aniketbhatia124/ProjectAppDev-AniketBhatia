@@ -1,0 +1,1142 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 272,
+      "max": [
+        0.6000000238418579,
+        0.7300000190734863,
+        0.44999998807907104
+      ],
+      "min": [
+        -0.6000000238418579,
+        0.0,
+        -0.44999998807907104
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5125,
+      "count": 420,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 272,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 272,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 160,
+      "max": [
+        0.2202450931072235,
+        0.3769482672214508,
+        0.19068358838558197
+      ],
+      "min": [
+        -0.2202450931072235,
+        -4.3855537816952776E-17,
+        -0.24669542908668518
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5125,
+      "count": 360,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 160,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 160,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 304,
+      "max": [
+        0.2329978048801422,
+        0.9381049871444702,
+        0.20032669603824615
+      ],
+      "min": [
+        -0.2329978048801422,
+        0.3708063066005707,
+        -0.262197345495224
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5125,
+      "count": 1452,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 304,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 304,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 304,
+      "max": [
+        0.2329978048801422,
+        0.9381049871444702,
+        0.20032669603824615
+      ],
+      "min": [
+        -0.2329978048801422,
+        0.3708063066005707,
+        -0.262197345495224
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5125,
+      "count": 1452,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 304,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 15,
+      "componentType": 5126,
+      "count": 304,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 16,
+      "componentType": 5126,
+      "count": 160,
+      "max": [
+        0.2202450931072235,
+        0.3769482672214508,
+        0.19068358838558197
+      ],
+      "min": [
+        -0.2202450931072235,
+        -4.3855537816952776E-17,
+        -0.24669542908668518
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 17,
+      "componentType": 5125,
+      "count": 360,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 18,
+      "componentType": 5126,
+      "count": 160,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 19,
+      "componentType": 5126,
+      "count": 160,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 20,
+      "componentType": 5126,
+      "count": 160,
+      "max": [
+        0.2202450931072235,
+        0.3769482672214508,
+        0.19068358838558197
+      ],
+      "min": [
+        -0.2202450931072235,
+        -4.3855537816952776E-17,
+        -0.24669542908668518
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 21,
+      "componentType": 5125,
+      "count": 360,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 22,
+      "componentType": 5126,
+      "count": 160,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 23,
+      "componentType": 5126,
+      "count": 160,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 24,
+      "componentType": 5126,
+      "count": 304,
+      "max": [
+        0.2329978048801422,
+        0.9381049871444702,
+        0.20032669603824615
+      ],
+      "min": [
+        -0.2329978048801422,
+        0.3708063066005707,
+        -0.262197345495224
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 25,
+      "componentType": 5125,
+      "count": 1452,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 26,
+      "componentType": 5126,
+      "count": 304,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 27,
+      "componentType": 5126,
+      "count": 304,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 28,
+      "componentType": 5126,
+      "count": 160,
+      "max": [
+        0.2202450931072235,
+        0.3769482672214508,
+        0.19068358838558197
+      ],
+      "min": [
+        -0.2202450931072235,
+        -4.3855537816952776E-17,
+        -0.24669542908668518
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 29,
+      "componentType": 5125,
+      "count": 360,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 30,
+      "componentType": 5126,
+      "count": 160,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 31,
+      "componentType": 5126,
+      "count": 160,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 32,
+      "componentType": 5126,
+      "count": 304,
+      "max": [
+        0.2329978048801422,
+        0.9381049871444702,
+        0.20032669603824615
+      ],
+      "min": [
+        -0.2329978048801422,
+        0.3708063066005707,
+        -0.262197345495224
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 33,
+      "componentType": 5125,
+      "count": 1452,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 34,
+      "componentType": 5126,
+      "count": 304,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 35,
+      "componentType": 5126,
+      "count": 304,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Modov11.2",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 3264
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1680,
+      "byteOffset": 3264
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3264,
+      "byteOffset": 4944
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2176,
+      "byteOffset": 8208
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 10384
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1440,
+      "byteOffset": 12304
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 13744
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1280,
+      "byteOffset": 15664
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3648,
+      "byteOffset": 16944
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5808,
+      "byteOffset": 20592
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3648,
+      "byteOffset": 26400
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2432,
+      "byteOffset": 30048
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3648,
+      "byteOffset": 32480
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5808,
+      "byteOffset": 36128
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3648,
+      "byteOffset": 41936
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2432,
+      "byteOffset": 45584
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 48016
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1440,
+      "byteOffset": 49936
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 51376
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1280,
+      "byteOffset": 53296
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 54576
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1440,
+      "byteOffset": 56496
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 57936
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1280,
+      "byteOffset": 59856
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3648,
+      "byteOffset": 61136
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5808,
+      "byteOffset": 64784
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3648,
+      "byteOffset": 70592
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2432,
+      "byteOffset": 74240
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 76672
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1440,
+      "byteOffset": 78592
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 80032
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1280,
+      "byteOffset": 81952
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3648,
+      "byteOffset": 83232
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5808,
+      "byteOffset": 86880
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3648,
+      "byteOffset": 92688
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2432,
+      "byteOffset": 96336
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 98768,
+      "uri": "DiningSet0.bin"
+    }
+  ],
+  "cameras": [
+    {
+      "name": "Camera",
+      "perspective": {
+        "yfov": 0.8726,
+        "znear": 0.01
+      },
+      "type": "perspective"
+    },
+    {
+      "name": "Camera (2)",
+      "perspective": {
+        "yfov": 0.8726,
+        "znear": 0.01
+      },
+      "type": "perspective"
+    }
+  ],
+  "images": [
+    {
+      "mimeType": "image/png",
+      "uri": "Wood_Alder_Horizon.png"
+    },
+    {
+      "mimeType": "image/png",
+      "uri": "Wood_Alder_HorizonNM.png"
+    },
+    {
+      "mimeType": "image/png",
+      "uri": "DiningTable4AO.png"
+    },
+    {
+      "mimeType": "image/png",
+      "uri": "Wood_Alder_Horizon.png"
+    },
+    {
+      "mimeType": "image/png",
+      "uri": "Wood_Alder_HorizonNM.png"
+    },
+    {
+      "mimeType": "image/png",
+      "uri": "ChairDiningUpholstered_AO.png"
+    },
+    {
+      "mimeType": "image/png",
+      "uri": "GenericFabric_WhitePS.png"
+    },
+    {
+      "mimeType": "image/png",
+      "uri": "GenericFabric_NM_PS.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "material-1",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.5,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "doubleSided": false,
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "TableMat",
+      "normalTexture": {
+        "index": 1,
+        "scale": 0.10000000149011612,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 2,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6,
+          0.6,
+          0.6,
+          1.0
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.05000000074505806,
+        "roughnessFactor": 0.8999999761581421
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "doubleSided": false,
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "Legs",
+      "normalTexture": {
+        "index": 4,
+        "scale": 0.5,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 5,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.6000000238418579,
+          0.6000000238418579,
+          0.6000000238418579,
+          1.0
+        ],
+        "baseColorTexture": {
+          "index": 3,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.05000000074505806,
+        "roughnessFactor": 0.8500000238418579
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "doubleSided": false,
+      "emissiveFactor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "name": "Seat",
+      "normalTexture": {
+        "index": 7,
+        "scale": 0.75,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 8,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.06329113990068436,
+          0.06329113990068436,
+          0.06329113990068436,
+          1.0
+        ],
+        "baseColorTexture": {
+          "index": 6,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 1.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 1,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 6,
+            "TEXCOORD_0": 7
+          },
+          "indices": 5,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 10,
+            "TEXCOORD_0": 11
+          },
+          "indices": 9,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 14,
+            "TEXCOORD_0": 15
+          },
+          "indices": 13,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 16,
+            "NORMAL": 18,
+            "TEXCOORD_0": 19
+          },
+          "indices": 17,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 20,
+            "NORMAL": 22,
+            "TEXCOORD_0": 23
+          },
+          "indices": 21,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 24,
+            "NORMAL": 26,
+            "TEXCOORD_0": 27
+          },
+          "indices": 25,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 28,
+            "NORMAL": 30,
+            "TEXCOORD_0": 31
+          },
+          "indices": 29,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 32,
+            "NORMAL": 34,
+            "TEXCOORD_0": 35
+          },
+          "indices": 33,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Dining_Table_120x90_Space_Planning"
+    },
+    {
+      "camera": 0,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9961947202682495,
+        -0.08715574443340302,
+        0.0,
+        0.0,
+        0.08715574443340302,
+        0.9961947202682495,
+        0.0,
+        0.0,
+        0.75,
+        4.0,
+        1.0
+      ],
+      "name": "Camera"
+    },
+    {
+      "name": "Texture Group"
+    },
+    {
+      "children": [
+        4,
+        13,
+        14,
+        15
+      ],
+      "name": "Dining_Chair_Upholstered"
+    },
+    {
+      "children": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "name": "Chair_Upholstered_Space_Planning"
+    },
+    {
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.2800000011920929,
+        0.0,
+        -0.4300000071525574,
+        1.0
+      ],
+      "mesh": 1,
+      "name": "Chair_Upholstered_Space_Planning_Legs"
+    },
+    {
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.2800000011920929,
+        0.0,
+        -0.4300000071525574,
+        1.0
+      ],
+      "mesh": 2,
+      "name": "Chair_Upholstered_Space_Planning_Seat"
+    },
+    {
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -0.2759999930858612,
+        2.6702881683604573E-8,
+        -0.4300000071525574,
+        1.0
+      ],
+      "mesh": 3,
+      "name": "Chair_Upholstered_Space_Planning_Seat (2)"
+    },
+    {
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -0.2759999930858612,
+        2.6702881683604573E-8,
+        -0.4300000071525574,
+        1.0
+      ],
+      "mesh": 4,
+      "name": "Chair_Upholstered_Space_Planning_Legs (2)"
+    },
+    {
+      "matrix": [
+        -1.0,
+        -1.2246468525851679E-16,
+        0.0,
+        0.0,
+        -1.2246468525851679E-16,
+        1.0,
+        1.2246468525851679E-16,
+        0.0,
+        -1.4997597572211942E-32,
+        1.2246468525851679E-16,
+        -1.0,
+        0.0,
+        0.2799999415874481,
+        -7.1525572131747595E-9,
+        0.4399999976158142,
+        1.0
+      ],
+      "mesh": 5,
+      "name": "Chair_Upholstered_Space_Planning_Legs (3)"
+    },
+    {
+      "matrix": [
+        -1.0,
+        -1.2246468525851679E-16,
+        0.0,
+        0.0,
+        -1.2246468525851679E-16,
+        1.0,
+        1.2246468525851679E-16,
+        0.0,
+        -1.4997597572211942E-32,
+        1.2246468525851679E-16,
+        -1.0,
+        0.0,
+        0.2799999415874481,
+        -7.1525572131747595E-9,
+        0.4399999976158142,
+        1.0
+      ],
+      "mesh": 6,
+      "name": "Chair_Upholstered_Space_Planning_Seat (3)"
+    },
+    {
+      "matrix": [
+        -1.0,
+        -1.2246468525851679E-16,
+        0.0,
+        0.0,
+        -1.2246468525851679E-16,
+        1.0,
+        1.2246468525851679E-16,
+        0.0,
+        -1.4997597572211942E-32,
+        1.2246468525851679E-16,
+        -1.0,
+        0.0,
+        -0.276000052690506,
+        5.2452087118126656E-8,
+        0.4399999976158142,
+        1.0
+      ],
+      "mesh": 7,
+      "name": "Chair_Upholstered_Space_Planning_Legs (4)"
+    },
+    {
+      "matrix": [
+        -1.0,
+        -1.2246468525851679E-16,
+        0.0,
+        0.0,
+        -1.2246468525851679E-16,
+        1.0,
+        1.2246468525851679E-16,
+        0.0,
+        -1.4997597572211942E-32,
+        1.2246468525851679E-16,
+        -1.0,
+        0.0,
+        -0.276000052690506,
+        5.2452087118126656E-8,
+        0.4399999976158142,
+        1.0
+      ],
+      "mesh": 8,
+      "name": "Chair_Upholstered_Space_Planning_Seat (4)"
+    },
+    {
+      "camera": 1,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.9961947202682495,
+        -0.08715573698282242,
+        0.0,
+        0.0,
+        0.08715573698282242,
+        0.9961947202682495,
+        0.0,
+        0.0,
+        0.75,
+        4.0,
+        1.0
+      ],
+      "name": "Camera (2)"
+    },
+    {
+      "name": "TextureGroup (2)"
+    },
+    {
+      "name": "Texture Group (2)"
+    }
+  ],
+  "samplers": [
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "Wood_Alder_Horizon ",
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "name": "Wood_Alder_HorizonNM ",
+      "sampler": 1,
+      "source": 1
+    },
+    {
+      "name": "DiningTable4AO ",
+      "sampler": 2,
+      "source": 2
+    },
+    {
+      "name": "Wood_Alder_Horizon (2) ",
+      "sampler": 3,
+      "source": 3
+    },
+    {
+      "name": "Wood_Alder_HorizonNM (2) ",
+      "sampler": 4,
+      "source": 4
+    },
+    {
+      "name": "ChairDiningUpholstered_AO  (2)",
+      "sampler": 5,
+      "source": 5
+    },
+    {
+      "name": "GenericFabric_WhitePS ",
+      "sampler": 6,
+      "source": 6
+    },
+    {
+      "name": "GenericFabric_NM_PS ",
+      "sampler": 7,
+      "source": 7
+    },
+    {
+      "name": "ChairDiningUpholstered_AO ",
+      "sampler": 8,
+      "source": 5
+    }
+  ]
+}

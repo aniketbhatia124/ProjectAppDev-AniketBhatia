@@ -1,0 +1,334 @@
+# File produced by AccuTrans 3D
+
+newmtl Dover_Pend
+  Ns 35.29
+  d 1.0
+  illum 2
+  Kd 0.7412 0.7176 0.6824
+  Ka 0.7412 0.7176 0.6824
+  Ks 0.898 0.898 0.898
+
+newmtl Dover_Pend_1
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.9608 0.9412 0.8706
+  Ka 0.9608 0.9412 0.8706
+  Ks 0.898 0.898 0.898
+
+newmtl Dover_Pend_2
+  Ns 108.95
+  d 0.95
+  illum 2
+  Kd 1.0 1.0 1.0
+  Ka 1.0 1.0 1.0
+  Ks 0.898 0.898 0.898
+
+newmtl Fruit_Plat
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.6588 0.2784 0.2588
+  Ka 0.6588 0.2784 0.2588
+  Ks 0.898 0.898 0.898
+
+newmtl Fruit_Plat_1
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 0.6549 0.6314 0.4275
+  Ka 0.6549 0.6314 0.4275
+  Ks 0.898 0.898 0.898
+
+newmtl Fruit_Plat_2
+  Ns 77.2
+  d 1.0
+  illum 2
+  Kd 0.6078 0.3569 0.2549
+  Ka 0.6078 0.3569 0.2549
+  Ks 0.898 0.898 0.898
+
+newmtl Fruit_Plat_3
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 1.0 1.0 1.0
+  Ka 1.0 1.0 1.0
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set1
+  Ns 35.29
+  d 1.0
+  illum 2
+  Kd 0.7412 0.7176 0.6824
+  Ka 0.7412 0.7176 0.6824
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set1_1
+  Ns 26.4
+  d 1.0
+  illum 2
+  Kd 0.9294 0.9529 0.7804
+  Ka 0.9294 0.9529 0.7804
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set1_2
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 0.9255 0.9294 0.8941
+  Ka 0.9255 0.9294 0.8941
+  Ks 0.898 0.898 0.898
+  map_Kd E:\WHITEM~2.jpg
+
+newmtl Place_Set1_3
+  Ns 26.4
+  d 0.55
+  illum 2
+  Kd 0.6784 0.8235 0.3765
+  Ka 0.6784 0.8235 0.3765
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set1_4
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 1.0 1.0 1.0
+  Ka 1.0 1.0 1.0
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set2
+  Ns 35.29
+  d 1.0
+  illum 2
+  Kd 0.7412 0.7176 0.6824
+  Ka 0.7412 0.7176 0.6824
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set2_1
+  Ns 26.4
+  d 1.0
+  illum 2
+  Kd 0.9294 0.9529 0.7804
+  Ka 0.9294 0.9529 0.7804
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set2_2
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 0.9255 0.9294 0.8941
+  Ka 0.9255 0.9294 0.8941
+  Ks 0.898 0.898 0.898
+  map_Kd E:\WHITEM~2.jpg
+
+newmtl Place_Set2_3
+  Ns 26.4
+  d 0.55
+  illum 2
+  Kd 0.6784 0.8235 0.3765
+  Ka 0.6784 0.8235 0.3765
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set2_4
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 1.0 1.0 1.0
+  Ka 1.0 1.0 1.0
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set3
+  Ns 35.29
+  d 1.0
+  illum 2
+  Kd 0.7412 0.7176 0.6824
+  Ka 0.7412 0.7176 0.6824
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set3_1
+  Ns 26.4
+  d 1.0
+  illum 2
+  Kd 0.9294 0.9529 0.7804
+  Ka 0.9294 0.9529 0.7804
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set3_2
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 0.9255 0.9294 0.8941
+  Ka 0.9255 0.9294 0.8941
+  Ks 0.898 0.898 0.898
+  map_Kd E:\WHITEM~2.jpg
+
+newmtl Place_Set3_3
+  Ns 26.4
+  d 0.55
+  illum 2
+  Kd 0.6784 0.8235 0.3765
+  Ka 0.6784 0.8235 0.3765
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Set3_4
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 1.0 1.0 1.0
+  Ka 1.0 1.0 1.0
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Sett
+  Ns 35.29
+  d 1.0
+  illum 2
+  Kd 0.7412 0.7176 0.6824
+  Ka 0.7412 0.7176 0.6824
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Sett_1
+  Ns 26.4
+  d 1.0
+  illum 2
+  Kd 0.9294 0.9529 0.7804
+  Ka 0.9294 0.9529 0.7804
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Sett_2
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 0.9255 0.9294 0.8941
+  Ka 0.9255 0.9294 0.8941
+  Ks 0.898 0.898 0.898
+  map_Kd E:\WHITEM~2.jpg
+
+newmtl Place_Sett_3
+  Ns 26.4
+  d 0.55
+  illum 2
+  Kd 0.6784 0.8235 0.3765
+  Ka 0.6784 0.8235 0.3765
+  Ks 0.898 0.898 0.898
+
+newmtl Place_Sett_4
+  Ns 102.6
+  d 1.0
+  illum 2
+  Kd 1.0 1.0 1.0
+  Ka 1.0 1.0 1.0
+  Ks 0.898 0.898 0.898
+
+newmtl Rectangula
+  Ns 55.61
+  d 1.0
+  illum 2
+  Kd 0.6353 0.4471 0.2745
+  Ka 0.6353 0.4471 0.2745
+  Ks 0.898 0.898 0.898
+  map_Kd E:\4267CH~1.jpg
+
+newmtl Scroll_Ar1
+  Ns 55.61
+  d 1.0
+  illum 2
+  Kd 0.6353 0.4471 0.2745
+  Ka 0.6353 0.4471 0.2745
+  Ks 0.898 0.898 0.898
+  map_Kd E:\4267CH~1.jpg
+
+newmtl Scroll_Ar1_1
+  Ns 39.1
+  d 1.0
+  illum 2
+  Kd 0.6549 0.7412 0.7608
+  Ka 0.6549 0.7412 0.7608
+  Ks 0.898 0.898 0.898
+  map_Kd E:\HIC0047.jpg
+
+newmtl Scroll_Ar2
+  Ns 55.61
+  d 1.0
+  illum 2
+  Kd 0.6353 0.4471 0.2745
+  Ka 0.6353 0.4471 0.2745
+  Ks 0.898 0.898 0.898
+  map_Kd E:\4267CH~1.jpg
+
+newmtl Scroll_Ar2_1
+  Ns 39.1
+  d 1.0
+  illum 2
+  Kd 0.6549 0.7412 0.7608
+  Ka 0.6549 0.7412 0.7608
+  Ks 0.898 0.898 0.898
+  map_Kd E:\HIC0047.jpg
+
+newmtl Scroll_Ar3
+  Ns 55.61
+  d 1.0
+  illum 2
+  Kd 0.6353 0.4471 0.2745
+  Ka 0.6353 0.4471 0.2745
+  Ks 0.898 0.898 0.898
+  map_Kd E:\4267CH~1.jpg
+
+newmtl Scroll_Ar3_1
+  Ns 39.1
+  d 1.0
+  illum 2
+  Kd 0.6549 0.7412 0.7608
+  Ka 0.6549 0.7412 0.7608
+  Ks 0.898 0.898 0.898
+  map_Kd E:\HIC0047.jpg
+
+newmtl Scroll_Arm
+  Ns 55.61
+  d 1.0
+  illum 2
+  Kd 0.6353 0.4471 0.2745
+  Ka 0.6353 0.4471 0.2745
+  Ks 0.898 0.898 0.898
+  map_Kd E:\4267CH~1.jpg
+
+newmtl Scroll_Arm_1
+  Ns 39.1
+  d 1.0
+  illum 2
+  Kd 0.6549 0.7412 0.7608
+  Ka 0.6549 0.7412 0.7608
+  Ks 0.898 0.898 0.898
+  map_Kd E:\HIC0047.jpg
+
+newmtl Wine_Glas1
+  Ns 26.4
+  d 0.55
+  illum 2
+  Kd 0.6784 0.8235 0.3765
+  Ka 0.6784 0.8235 0.3765
+  Ks 0.898 0.898 0.898
+
+newmtl Wine_Glas2
+  Ns 26.4
+  d 0.55
+  illum 2
+  Kd 0.6784 0.8235 0.3765
+  Ka 0.6784 0.8235 0.3765
+  Ks 0.898 0.898 0.898
+
+newmtl Wine_Glas3
+  Ns 26.4
+  d 0.55
+  illum 2
+  Kd 0.6784 0.8235 0.3765
+  Ka 0.6784 0.8235 0.3765
+  Ks 0.898 0.898 0.898
+
+newmtl Wine_Glass
+  Ns 26.4
+  d 0.55
+  illum 2
+  Kd 0.6784 0.8235 0.3765
+  Ka 0.6784 0.8235 0.3765
+  Ks 0.898 0.898 0.898

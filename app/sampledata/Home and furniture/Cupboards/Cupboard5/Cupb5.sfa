@@ -1,0 +1,104 @@
+{
+  materials: [
+    {
+      name: '04___Default',
+      parameters: [
+        {
+          baseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColor: '04___Default_baseColor',
+        },
+        {
+          diffuseColorFactor: null,
+        },
+        {
+          diffuseColor: null,
+        },
+        {
+          normal: '04___Default_normal',
+        },
+        {
+          metallicFactor: 0,
+        },
+        {
+          roughnessFactor: 1,
+        },
+        {
+          specularFactor: null,
+        },
+        {
+          glossinessFactor: null,
+        },
+        {
+          specularGlossiness: null,
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: '04___Default_metallicRoughness',
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/Home and furniture/Cupboards/Cupboard5/Cupb5.gltf',
+    name: 'Cupb5',
+    recenter: 'root',
+    scale: 0.17457800000000001,
+  },
+  samplers: [
+    {
+      file: 'sampledata/Home and furniture/Cupboards/Cupboard5/textures/04___Default_baseColor.png',
+      name: '04___Default_baseColor',
+      pipeline_name: 'textures/04___Default_baseColor.png',
+    },
+    {
+      file: 'sampledata/Home and furniture/Cupboards/Cupboard5/textures/04___Default_metallicRoughness.png',
+      name: '04___Default_metallicRoughness',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'textures/04___Default_metallicRoughness.png',
+    },
+    {
+      file: 'sampledata/Home and furniture/Cupboards/Cupboard5/textures/04___Default_normal.png',
+      name: '04___Default_normal',
+      params: {
+        usage_type: 'Normal',
+      },
+      pipeline_name: 'textures/04___Default_normal.png',
+    },
+  ],
+  version: '0.54:2',
+}

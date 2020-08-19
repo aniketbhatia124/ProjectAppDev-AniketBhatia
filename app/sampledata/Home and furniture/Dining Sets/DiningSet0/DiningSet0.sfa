@@ -1,0 +1,252 @@
+{
+  materials: [
+    {
+      name: 'TableMat',
+      parameters: [
+        {
+          baseColorFactor: [
+            0.59999999999999998,
+            0.59999999999999998,
+            0.59999999999999998,
+            1,
+          ],
+        },
+        {
+          baseColor: 'Wood_Alder_Horizon',
+        },
+        {
+          diffuseColorFactor: null,
+        },
+        {
+          diffuseColor: null,
+        },
+        {
+          normal: 'Wood_Alder_HorizonNM',
+        },
+        {
+          metallicFactor: 0.050000000000000003,
+        },
+        {
+          roughnessFactor: 0.90000000000000002,
+        },
+        {
+          specularFactor: null,
+        },
+        {
+          glossinessFactor: null,
+        },
+        {
+          specularGlossiness: null,
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: 'DiningTable4AO',
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+    {
+      name: 'Legs',
+      parameters: [
+        {
+          baseColorFactor: [
+            0.59999999999999998,
+            0.59999999999999998,
+            0.59999999999999998,
+            1,
+          ],
+        },
+        {
+          baseColor: 'Wood_Alder_Horizon',
+        },
+        {
+          diffuseColorFactor: null,
+        },
+        {
+          diffuseColor: null,
+        },
+        {
+          normal: 'Wood_Alder_HorizonNM',
+        },
+        {
+          metallicFactor: 0.050000000000000003,
+        },
+        {
+          roughnessFactor: 0.84999999999999998,
+        },
+        {
+          specularFactor: null,
+        },
+        {
+          glossinessFactor: null,
+        },
+        {
+          specularGlossiness: null,
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: 'ChairDiningUpholstered_AO',
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+    {
+      name: 'Seat',
+      parameters: [
+        {
+          baseColorFactor: [
+            0.063291,
+            0.063291,
+            0.063291,
+            1,
+          ],
+        },
+        {
+          baseColor: 'GenericFabric_WhitePS',
+        },
+        {
+          diffuseColorFactor: null,
+        },
+        {
+          diffuseColor: null,
+        },
+        {
+          normal: 'GenericFabric_NM_PS',
+        },
+        {
+          metallicFactor: 0,
+        },
+        {
+          roughnessFactor: 1,
+        },
+        {
+          specularFactor: null,
+        },
+        {
+          glossinessFactor: null,
+        },
+        {
+          specularGlossiness: null,
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: null,
+        },
+        {
+          occlusion: 'ChairDiningUpholstered_AO',
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/Home and furniture/Dining Sets/DiningSet0/DiningSet0.gltf',
+    name: 'DiningSet0',
+    recenter: 'root',
+  },
+  samplers: [
+    {
+      file: 'sampledata/Home and furniture/Dining Sets/DiningSet0/GenericFabric_WhitePS.png',
+      name: 'GenericFabric_WhitePS',
+      pipeline_name: 'GenericFabric_WhitePS.png',
+    },
+    {
+      file: 'sampledata/Home and furniture/Dining Sets/DiningSet0/GenericFabric_NM_PS.png',
+      name: 'GenericFabric_NM_PS',
+      params: {
+        usage_type: 'Normal',
+      },
+      pipeline_name: 'GenericFabric_NM_PS.png',
+    },
+    {
+      file: 'sampledata/Home and furniture/Dining Sets/DiningSet0/ChairDiningUpholstered_AO.png',
+      name: 'ChairDiningUpholstered_AO',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'ChairDiningUpholstered_AO.png',
+    },
+    {
+      file: 'sampledata/Home and furniture/Dining Sets/DiningSet0/Wood_Alder_Horizon.png',
+      name: 'Wood_Alder_Horizon',
+      pipeline_name: 'Wood_Alder_Horizon.png',
+    },
+    {
+      file: 'sampledata/Home and furniture/Dining Sets/DiningSet0/DiningTable4AO.png',
+      name: 'DiningTable4AO',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'DiningTable4AO.png',
+    },
+    {
+      file: 'sampledata/Home and furniture/Dining Sets/DiningSet0/Wood_Alder_HorizonNM.png',
+      name: 'Wood_Alder_HorizonNM',
+      params: {
+        usage_type: 'Normal',
+      },
+      pipeline_name: 'Wood_Alder_HorizonNM.png',
+    },
+  ],
+  version: '0.54:2',
+}

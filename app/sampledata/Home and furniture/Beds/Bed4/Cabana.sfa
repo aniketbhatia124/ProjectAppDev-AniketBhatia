@@ -1,0 +1,50 @@
+{
+  materials: [
+    {
+      name: 'lambert3SG',
+      parameters: [
+        {
+          baseColor: 'Cabana Texture',
+        },
+        {
+          baseColorTint: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/Home and furniture/Beds/Bed4/Cabana.obj',
+    name: 'Cabana',
+    recenter: 'root',
+    scale: 0.001951,
+  },
+  samplers: [
+    {
+      file: 'sampledata/Home and furniture/Beds/Bed4/Cabana Texture.png',
+      name: 'Cabana Texture',
+      pipeline_name: 'Cabana Texture.png',
+    },
+  ],
+  version: '0.54:2',
+}
