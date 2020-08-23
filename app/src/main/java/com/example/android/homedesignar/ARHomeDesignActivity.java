@@ -1,12 +1,8 @@
 package com.example.android.homedesignar;
 
-import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.media.CamcorderProfile;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -17,21 +13,13 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-import com.google.android.filament.Material;
 import com.google.ar.core.Anchor;
-import com.google.ar.core.Config;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Pose;
-import com.google.ar.core.Session;
-import com.google.ar.core.exceptions.CameraNotAvailableException;
 import com.google.ar.sceneform.AnchorNode;
-import com.google.ar.sceneform.ArSceneView;
 import com.google.ar.sceneform.Camera;
 import com.google.ar.sceneform.Node;
-import com.google.ar.sceneform.Scene;
-import com.google.ar.sceneform.SceneView;
 import com.google.ar.sceneform.Sun;
 import com.google.ar.sceneform.math.Quaternion;
 import com.google.ar.sceneform.math.Vector3;
@@ -40,7 +28,6 @@ import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.PlaneRenderer;
 import com.google.ar.sceneform.rendering.ShapeFactory;
 import com.google.ar.sceneform.rendering.ViewRenderable;
-import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
@@ -49,7 +36,7 @@ import java.util.List;
 
 public class ARHomeDesignActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
-    private ArFragment arFragment;
+    private CustomARFrag arFragment;
 
 
     private VideoRecorder videoRecorder;
@@ -69,7 +56,7 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
 
                             redsphererenderable,linerenderable;
     ViewRenderable distancerenderable;
-    Button clearbutton;
+    Button clearbutton,hostbutton,resolveButton;
 
 
 
@@ -107,7 +94,20 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
     AnchorNode[] viewanchorlist =new AnchorNode[300];
     int k=0;
 
+    private enum AnchorState{
+        NONE,
+        HOSTING,
+        HOSTED,
+        RESOLVING,
+        RESOLVED
+    }
 
+    private FireBaseUpdate fireBaseUpdate;
+
+
+    private AnchorState anchorState= AnchorState.NONE;
+    private Anchor cloudAnchor;
+    HitResult hitResultvariable;
 
 
     @Override
@@ -116,12 +116,13 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.arhomedesign);
 
         SlidingUpPanelLayout layout =findViewById(R.id.slidingup);
-        arFragment= (ArFragment) getSupportFragmentManager().findFragmentById(R.id.arfragment);
+        arFragment= (CustomARFrag) getSupportFragmentManager().findFragmentById(R.id.arfragment);
 
 //        Session session =  new Session(arFragment.getArSceneView().getSession());
 //        Config config= new Config(session);
 //        config.setFocusMode(Config.FocusMode.AUTO);
 //        session.configure(config);
+
 
         Bed1= findViewById(R.id.Bed1);
         Bed2= findViewById(R.id.Bed2);
@@ -185,16 +186,10 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
         TextView pullup = findViewById(R.id.pullup);
         distbetweenpts = findViewById(R.id.distbetweenpts);
         clearbutton= findViewById(R.id.clearbutton);
+        hostbutton= findViewById(R.id.host);
 //        Button buttonrecording = findViewById(R.id.recordingbutton);
+        resolveButton= findViewById(R.id.resolve);
 
-        //To increase area of surface highlighted
-        arFragment.getArSceneView().getScene().addOnUpdateListener(frameTime -> {
-            arFragment.onUpdate(frameTime);
-            PlaneRenderer planeRenderer= arFragment.getArSceneView().getPlaneRenderer();
-            planeRenderer.getMaterial().thenAccept(material -> {
-               material.setFloat(PlaneRenderer.MATERIAL_SPOTLIGHT_RADIUS,5f);
-            });
-        });
 
 
 
@@ -211,31 +206,109 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
                 if(layout.getPanelState()==SlidingUpPanelLayout.PanelState.EXPANDED)
                 {
                     pullup.setText("TAP HERE TO CLOSE");
+                    clearbutton.setVisibility(View.INVISIBLE);
+                    hostbutton.setVisibility(View.INVISIBLE);
+                    resolveButton.setVisibility(View.INVISIBLE);
+
                 }
                 else if(layout.getPanelState()==SlidingUpPanelLayout.PanelState.COLLAPSED){
                     pullup.setText("TAP HERE TO OPEN");
+                    clearbutton.setVisibility(View.VISIBLE);
+                    hostbutton.setVisibility(View.VISIBLE);
+                    resolveButton.setVisibility(View.VISIBLE);
 
                 }
             }
         });
+
         arrayviewset();
         setonclicklistener();
         setlongonclicklistener();
-
         attachmodel();
+
         arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
-            Anchor anchor =hitResult.createAnchor();
+            hitResultvariable=hitResult;
+            Anchor anchor= hitResult.createAnchor();
             AnchorNode anchorNode =new AnchorNode(anchor);
             anchorNode.setParent(arFragment.getArSceneView().getScene());
             createModel(anchorNode,selected,anchor);
-
-
         });
 
+        hostbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(hitResultvariable==null){
+                    Toast.makeText(ARHomeDesignActivity.this,"Enter a model",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                Anchor anchor =arFragment.getArSceneView().getSession().hostCloudAnchor(hitResultvariable.createAnchor());
+                setCloudAnchor(anchor);
+                anchorState=AnchorState.HOSTING;
+                Toast.makeText(ARHomeDesignActivity.this,"Hosting Anchor...",Toast.LENGTH_SHORT).show();
+                AnchorNode anchorNode =new AnchorNode(cloudAnchor);
+                anchorNode.setParent(arFragment.getArSceneView().getScene());
+                createModel(anchorNode,selected,cloudAnchor);
+            }
+        });
+
+
+
+
+        arFragment.getArSceneView().getScene().addOnUpdateListener(frameTime -> {
+            arFragment.onUpdate(frameTime);
+            //To increase area of surface highlighted
+            PlaneRenderer planeRenderer= arFragment.getArSceneView().getPlaneRenderer();
+            planeRenderer.getMaterial().thenAccept(material -> {
+                material.setFloat(PlaneRenderer.MATERIAL_SPOTLIGHT_RADIUS,5f);
+            });
+
+
+            if(anchorState!=AnchorState.HOSTING&&anchorState!=AnchorState.RESOLVING) {
+                return;
+            }
+
+            Anchor.CloudAnchorState cloudAnchorState = cloudAnchor.getCloudAnchorState();
+
+            if (anchorState == AnchorState.HOSTING) {
+
+                if (cloudAnchorState.isError()) {
+                    Toast.makeText(this, cloudAnchorState.toString(), Toast.LENGTH_SHORT).show();
+                    anchorState = AnchorState.NONE;
+                }
+                else if (cloudAnchorState == Anchor.CloudAnchorState.SUCCESS) {
+                    fireBaseUpdate.nextShortCode((shortCode) -> {
+
+                        if (shortCode == null) {
+                            Toast.makeText(this, "Could not get code", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                        fireBaseUpdate.storeUsingShortCode(shortCode, cloudAnchor.getCloudAnchorId());
+                        Toast.makeText(this, "Anchor Hosted Successfully. Anchor ID= " + shortCode, Toast.LENGTH_SHORT).show();
+                    });
+
+                    anchorState = AnchorState.HOSTED;
+                }
+            }
+
+            else if(anchorState==AnchorState.RESOLVING){
+
+                if(cloudAnchorState.isError()){
+                    Toast.makeText(this, "Error resolving anchor"+cloudAnchorState, Toast.LENGTH_SHORT).show();
+                    anchorState=AnchorState.NONE;
+                }
+
+                else if(cloudAnchorState== Anchor.CloudAnchorState.SUCCESS){
+                    Toast.makeText(this, "Anchor resolved Successfully", Toast.LENGTH_SHORT).show();
+                    anchorState=AnchorState.RESOLVED;
+                }
+            }
+        });
 
         clearbutton.setOnClickListener(v -> {
             k=0;
             hit=0;
+            hitResultvariable=null;
             List<Node> children = new ArrayList<>(arFragment.getArSceneView().getScene().getChildren());
             for (Node node : children) {
                 if (node instanceof AnchorNode) {
@@ -250,6 +323,7 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
             }
 
 
+            setCloudAnchor(null);
             for(int i=0; i< viewanchorlist.length;i++) {
                 if (viewanchorlist[i] != null) {
                     arFragment.getArSceneView().getScene().removeChild(viewanchorlist[i]);
@@ -278,7 +352,53 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
 //
 //
 
+        //Resolving Anchor
 
+        fireBaseUpdate = new FireBaseUpdate(this);
+
+
+        resolveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(cloudAnchor!=null){
+                    Toast.makeText(ARHomeDesignActivity.this,"No Anchor found",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                ResolveDialogFragment dialogFragment= new ResolveDialogFragment();
+                dialogFragment.setOkListener(ARHomeDesignActivity.this::onResolveOKbutton);
+                dialogFragment.show(getFragmentManager(),"Resolve");
+
+            }
+        });
+
+
+
+    }
+
+
+    private  void onResolveOKbutton(String dialogValue){
+    int shortCode=Integer.parseInt(dialogValue);
+
+    fireBaseUpdate.getCloudAnchorID(shortCode,(cloudAnchorId) -> {
+        Anchor resolvedAnchor = arFragment.getArSceneView().getSession().resolveCloudAnchor(cloudAnchorId);
+
+
+        setCloudAnchor(resolvedAnchor);
+        AnchorNode anchorNode =new AnchorNode(resolvedAnchor);
+        anchorNode.setParent(arFragment.getArSceneView().getScene());
+        createModel(anchorNode,selected,resolvedAnchor);
+        anchorState=AnchorState.RESOLVING;
+        Toast.makeText(this,"Resolving Anchor...",Toast.LENGTH_SHORT).show();
+    });
+    }
+
+
+    private void setCloudAnchor(Anchor newAnchor){
+        if(cloudAnchor != null){
+            cloudAnchor.detach();
+        }
+        cloudAnchor= newAnchor;
+        anchorState=AnchorState.NONE;
     }
 
 

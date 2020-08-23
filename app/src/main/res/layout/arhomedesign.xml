@@ -5,7 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="bottom"
     android:id="@+id/slidingup"
-    app:umanoDragView="@id/pullup">
+    app:umanoDragView="@id/pullup"
+
+    app:umanoOverlay="true"
+    app:umanoShadowHeight="20dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,7 +16,7 @@
 
         <fragment
             android:id="@+id/arfragment"
-            android:name="com.google.ar.sceneform.ux.ArFragment"
+            android:name="com.example.android.homedesignar.CustomARFrag"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -27,6 +30,29 @@
             android:textColor="#FFFFFF"
             android:layout_centerHorizontal="true"/>
 
+        <Button
+            android:id="@+id/resolve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/buttondesign"
+            android:text="Resolve"
+
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/host"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Host"
+            android:layout_alignParentTop="true"
+
+            android:background="@drawable/buttondesign"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"/>
 <!--        <Button-->
 <!--            android:id="@+id/recordingbutton"-->
 <!--            android:layout_width="56dp"-->
@@ -53,16 +79,21 @@
             android:layout_height="wrap_content"
             android:gravity="center|top"
             android:text="TAP HERE TO OPEN"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
             android:layout_margin="5dp"
-            android:layout_marginBottom="60dp"/>
+           />
 
         <TextView
             android:id="@+id/distbetweenpts"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:textSize="24sp"
+            android:textSize="27sp"
+            android:textColor="#FFFFFF"
             android:textAlignment="center"
             android:text="Find distance between two points"
+
+            android:layout_marginTop="60dp"
             android:padding="3dp"/>
 
         <TextView
@@ -70,7 +101,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Beds"
-            android:textSize="18sp"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="30dp"/>
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -83,25 +115,25 @@
                 <ImageView
                     android:id="@+id/Bed1"
                     android:src="@drawable/bed1"
-                    android:layout_width="100dp"
+                    android:layout_width="169.4835dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Bed2"
                     android:src="@drawable/bed2"
-                    android:layout_width="100dp"
+                    android:layout_width="99.4dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Bed3"
                     android:src="@drawable/bed3"
-                    android:layout_width="100dp"
+                    android:layout_width="100.59dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Bed4"
                     android:src="@drawable/cabana"
-                    android:layout_width="100dp"
+                    android:layout_width="131.8518dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
             </LinearLayout>
@@ -113,7 +145,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cupboards"
-            android:textSize="18sp" />
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -126,49 +160,49 @@
                 <ImageView
                     android:id="@+id/Cupboard1"
                     android:src="@drawable/cupb1"
-                    android:layout_width="100dp"
+                    android:layout_width="70dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Cupboard2"
                     android:src="@drawable/cupb2"
-                    android:layout_width="100dp"
+                    android:layout_width="86.6505dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Cupboard3"
                     android:src="@drawable/cupb3"
-                    android:layout_width="100dp"
+                    android:layout_width="57.5452dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Cupboard4"
                     android:src="@drawable/cupb4"
-                    android:layout_width="100dp"
+                    android:layout_width="66.5829dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Cupboard5"
                     android:src="@drawable/cupb5"
-                    android:layout_width="100dp"
+                    android:layout_width="70.7762dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Cupboard6"
                     android:src="@drawable/cupb6"
-                    android:layout_width="100dp"
+                    android:layout_width="71.6791dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Cupboard7"
                     android:src="@drawable/cupb7"
-                    android:layout_width="100dp"
+                    android:layout_width="55.2112dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Cupboard8"
                     android:src="@drawable/cupb8"
-                    android:layout_width="100dp"
+                    android:layout_width="97.5dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
             </LinearLayout>
@@ -179,7 +213,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dining Sets"
-            android:textSize="18sp" />
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -192,49 +228,49 @@
                 <ImageView
                     android:id="@+id/DiningSet0"
                     android:src="@drawable/diningset0"
-                    android:layout_width="100dp"
+                    android:layout_width="96.9072dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningSet1"
                     android:src="@drawable/diningset1"
-                    android:layout_width="100dp"
+                    android:layout_width="73.4234dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningSet2"
                     android:src="@drawable/diningset2"
-                    android:layout_width="100dp"
+                    android:layout_width="1.015dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningSet3"
                     android:src="@drawable/diningset3"
-                    android:layout_width="100dp"
+                    android:layout_width="64.1148dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningSet4"
                     android:src="@drawable/diningset4"
                     android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_height="108.3612dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningSet6"
                     android:src="@drawable/diningset6"
-                    android:layout_width="100dp"
+                    android:layout_width="117.5824dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningSet7"
                     android:src="@drawable/diningset7"
-                    android:layout_width="100dp"
+                    android:layout_width="132dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningSet8"
                     android:src="@drawable/diningset8"
-                    android:layout_width="100dp"
+                    android:layout_width="81.8897dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
             </LinearLayout>
@@ -245,7 +281,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dining Tables"
-            android:textSize="18sp" />
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -258,31 +296,31 @@
                 <ImageView
                     android:id="@+id/DiningTable1"
                     android:src="@drawable/diningtable1"
-                    android:layout_width="100dp"
+                    android:layout_width="114.652dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningTable2"
                     android:src="@drawable/diningtable2"
-                    android:layout_width="100dp"
+                    android:layout_width="137.339dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningTable3"
                     android:src="@drawable/diningtable3"
-                    android:layout_width="100dp"
+                    android:layout_width="119.12225dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningTable4"
                     android:src="@drawable/diningtable4"
-                    android:layout_width="100dp"
+                    android:layout_width="111.5755dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/DiningTable5"
                     android:src="@drawable/diningtable5"
-                    android:layout_width="100dp"
+                    android:layout_width="119.9356dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
 
@@ -295,7 +333,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dining Chairs"
-            android:textSize="18sp" />
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -308,37 +348,37 @@
                 <ImageView
                     android:id="@+id/Armchair1"
                     android:src="@drawable/armchair1"
-                    android:layout_width="100dp"
+                    android:layout_width="88.7871dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Armchair2"
                     android:src="@drawable/armchair2"
-                    android:layout_width="100dp"
+                    android:layout_width="81.2658dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Chair1"
                     android:src="@drawable/chair1"
-                    android:layout_width="100dp"
+                    android:layout_width="73.1302dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Chair3"
                     android:src="@drawable/chair3"
-                    android:layout_width="100dp"
+                    android:layout_width="64.0506dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Chair4"
                     android:src="@drawable/chair4"
-                    android:layout_width="100dp"
+                    android:layout_width="70.024dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Chair5"
                     android:src="@drawable/chair5"
-                    android:layout_width="100dp"
+                    android:layout_width="84.7368dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
 
@@ -351,7 +391,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Miscellanous"
-            android:textSize="18sp" />
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -364,73 +406,73 @@
                 <ImageView
                     android:id="@+id/Bedsidetable"
                     android:src="@drawable/bedsidetable"
-                    android:layout_width="100dp"
+                    android:layout_width="78.1609dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Desk1"
                     android:src="@drawable/desk1"
-                    android:layout_width="100dp"
+                    android:layout_width="121.476dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Desk2"
                     android:src="@drawable/desk2"
-                    android:layout_width="100dp"
+                    android:layout_width="108.834dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Desk3"
                     android:src="@drawable/desk3"
-                    android:layout_width="100dp"
+                    android:layout_width="99.162dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Fan1"
                     android:src="@drawable/fan1"
-                    android:layout_width="100dp"
+                    android:layout_width="120.2952dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Fan2"
                     android:src="@drawable/fan2"
-                    android:layout_width="100dp"
+                    android:layout_width="121.6dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Kitchen1"
                     android:src="@drawable/kitchen1"
-                    android:layout_width="100dp"
+                    android:layout_width="116.37dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Kitchen2"
                     android:src="@drawable/kitchen2"
-                    android:layout_width="100dp"
+                    android:layout_width="155.1887dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Piano"
                     android:src="@drawable/piano"
-                    android:layout_width="100dp"
+                    android:layout_width="95.4545dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Stove"
                     android:src="@drawable/stove"
-                    android:layout_width="100dp"
+                    android:layout_width="87.3563dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/TV"
                     android:src="@drawable/tv"
-                    android:layout_width="100dp"
+                    android:layout_width="125.9927dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/WashingMachine"
                     android:src="@drawable/washingmachine"
-                    android:layout_width="100dp"
+                    android:layout_width="91.133dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
 
@@ -444,7 +486,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sofa"
-            android:textSize="18sp" />
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -457,61 +501,61 @@
                 <ImageView
                     android:id="@+id/Sofa1"
                     android:src="@drawable/sofa1"
-                    android:layout_width="100dp"
+                    android:layout_width="135.9259dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa2"
                     android:src="@drawable/sofa2"
-                    android:layout_width="100dp"
+                    android:layout_width="116dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa3"
                     android:src="@drawable/sofa3"
-                    android:layout_width="100dp"
+                    android:layout_width="113.6363dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa4"
                     android:src="@drawable/sofa4"
-                    android:layout_width="100dp"
+                    android:layout_width="154.0984dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa6"
                     android:src="@drawable/sofa6"
-                    android:layout_width="100dp"
+                    android:layout_width="106.7857dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa7"
                     android:src="@drawable/sofa7"
-                    android:layout_width="100dp"
+                    android:layout_width="123.4899dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa8"
                     android:src="@drawable/sofa8"
-                    android:layout_width="100dp"
+                    android:layout_width="140.9961dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa9"
                     android:src="@drawable/sofa9"
-                    android:layout_width="100dp"
+                    android:layout_width="142.4242dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa10"
                     android:src="@drawable/sofa10"
-                    android:layout_width="100dp"
+                    android:layout_width="112.8205dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
                 <ImageView
                     android:id="@+id/Sofa11"
                     android:src="@drawable/sofa11"
-                    android:layout_width="100dp"
+                    android:layout_width="137dp"
                     android:layout_height="100dp"
                     android:padding="3dp"/>
 

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "227145062184",
+    "firebase_url": "https://homedesignar-d8425.firebaseio.com",
+    "project_id": "homedesignar-d8425",
+    "storage_bucket": "homedesignar-d8425.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227145062184:android:6a7d8a94b540f1af70621d",
+        "android_client_info": {
+          "package_name": "com.example.android.homedesignar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227145062184-lfof0brs5to062aj5vrslareri2ft6q6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.homedesignar",
+            "certificate_hash": "7fbe03b2edc8e19bfc21cfe14a5da550dcdcc5b4"
+          }
+        },
+        {
+          "client_id": "227145062184-140rmcfqbcu02as8g2mn7p1klvltb9pl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQhQanH7XoLM5RtqAagleIQyMrLCfe7ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227145062184-140rmcfqbcu02as8g2mn7p1klvltb9pl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

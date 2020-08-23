@@ -43,13 +43,12 @@ public class previewmodelactivity extends AppCompatActivity {
 
     bedsidetablerenderable, desk1renderable, desk2renderable, desk3renderable, fan1renderable, fan2renderable, kitchen1renderable, kitchen2renderable, pianorenderable, stoverenderable, tvrenderable, washingmachinerenderable,
 
-    sofa1renderable, sofa2renderable, sofa3renderable, sofa4renderable, sofa6renderable, sofa7renderable, sofa8renderable, sofa9renderable, sofa10renderable, sofa11renderable,
-
-    redsphererenderable,linerenderable;
+    sofa1renderable, sofa2renderable, sofa3renderable, sofa4renderable, sofa6renderable, sofa7renderable, sofa8renderable, sofa9renderable, sofa10renderable, sofa11renderable;
 
     int selected;
 
     TransformationSystem transformationSystem;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -76,6 +75,7 @@ public class previewmodelactivity extends AppCompatActivity {
 
     }
 
+
     private void previewmodelfunction(TransformableNode node) {
 
         if(selected==1){
@@ -87,7 +87,7 @@ public class previewmodelactivity extends AppCompatActivity {
         scene.addChild(node);
         }
         if(selected==2){
-        ;
+
             node.setRenderable(Bed2renderable);
             node.setParent(scene);
             node.setLocalPosition(new Vector3(0f,-3f,-10f));
