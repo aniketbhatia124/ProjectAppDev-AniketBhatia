@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -18,7 +19,8 @@
             android:id="@+id/arfragment"
             android:name="com.example.android.homedesignar.CustomARFrag"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            />
 
         <Button
             android:id="@+id/clearbutton"
@@ -28,32 +30,54 @@
             android:textSize="20sp"
             android:background="@drawable/buttondesign"
             android:textColor="#FFFFFF"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"/>
 
         <Button
             android:id="@+id/resolve"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:background="@drawable/buttondesign"
             android:text="Resolve"
-
+            android:layout_marginBottom="70dp"
+          android:layout_alignParentEnd="true"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="15sp"
+            android:visibility="invisible"/>
 
         <Button
             android:id="@+id/host"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Host"
-            android:layout_alignParentTop="true"
-
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/resolve"
+            android:layout_marginBottom="70dp"
             android:background="@drawable/buttondesign"
+            android:text="Host"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
-<!--        <Button-->
+            android:textSize="15sp"
+            android:visibility="invisible"/>
+
+        <Switch
+            android:id="@+id/switchshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="#FFF"
+            android:layout_marginBottom="70dp"
+            android:checked="false"
+            android:text="Share Model"
+            android:textSize="20sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+        <!--        <Button-->
 <!--            android:id="@+id/recordingbutton"-->
 <!--            android:layout_width="56dp"-->
 <!--            android:layout_height="56dp"-->

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
@@ -46,13 +48,23 @@ public class previewmodelactivity extends AppCompatActivity {
     sofa1renderable, sofa2renderable, sofa3renderable, sofa4renderable, sofa6renderable, sofa7renderable, sofa8renderable, sofa9renderable, sofa10renderable, sofa11renderable;
 
     int selected;
-
+    TransformableNode node;
     TransformationSystem transformationSystem;
+    private static final String TAG = "previewmodelactivity";
 
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        Log.d(TAG, "onKeyDown:");
+//        if(keyCode==KeyEvent.KEYCODE_BACK){
+//           finish();
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate:");
         setContentView(R.layout.previewmodel);
         Intent intent= getIntent();
         selected= intent.getIntExtra("selected",1);
@@ -64,25 +76,26 @@ public class previewmodelactivity extends AppCompatActivity {
             transformationSystem.onTouch(hitTestResult,motionEvent);
 
         });
-        attachmodel();
 
-        TransformableNode node = new TransformableNode(transformationSystem);
+
+        attachmodel();
+       node = new TransformableNode(transformationSystem);
         node.getRotationController().setEnabled(true);
         node.getScaleController().setEnabled(true);
         node.getTranslationController().setEnabled(false);
-        previewmodelfunction(node);
+        previewmodelfunction();
 
 
     }
 
 
-    private void previewmodelfunction(TransformableNode node) {
+    private void previewmodelfunction() {
 
         if(selected==1){
 
         node.setRenderable(Bed1renderable);
         node.setParent(scene);
-        node.setLocalPosition(new Vector3(0f,-3f,-10f));
+        node.setLocalPosition(new Vector3(0f,-3f,-8f));
         node.select();
         scene.addChild(node);
         }
@@ -90,7 +103,7 @@ public class previewmodelactivity extends AppCompatActivity {
 
             node.setRenderable(Bed2renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-3f,-6f));
             node.select();
             scene.addChild(node);
         }
@@ -98,7 +111,7 @@ public class previewmodelactivity extends AppCompatActivity {
 
             node.setRenderable(Bed3renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-3f,-6f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
@@ -106,7 +119,7 @@ public class previewmodelactivity extends AppCompatActivity {
 
             node.setRenderable(Bed4renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-1f,-4f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
@@ -114,7 +127,7 @@ public class previewmodelactivity extends AppCompatActivity {
 
             node.setRenderable(Cupb1renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-3f,-7f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
@@ -122,7 +135,7 @@ public class previewmodelactivity extends AppCompatActivity {
 
             node.setRenderable(Cupb2renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-3f,-7f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
@@ -130,42 +143,42 @@ public class previewmodelactivity extends AppCompatActivity {
 
             node.setRenderable(Cupb3renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-1f,-5f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
         if(selected==8){
             node.setRenderable(Cupb4renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-3f,-7f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
         if(selected==9){
             node.setRenderable(Cupb5renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-3f,-7f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
         if(selected==10){
             node.setRenderable(Cupb6renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-3f,-6f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
         if(selected==11){
             node.setRenderable(Cupb7renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f,-3f,-10f));
+            node.setLocalPosition(new Vector3(0f,-2f,-5f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
         if(selected==12) {
             node.setRenderable(Cupb8renderable);
             node.setParent(scene);
-            node.setLocalPosition(new Vector3(0f, -3f, -10f));
+            node.setLocalPosition(new Vector3(0f, -3f, -6f));
             transformationSystem.selectNode(node);
             scene.addChild(node);
         }
@@ -465,378 +478,489 @@ public class previewmodelactivity extends AppCompatActivity {
 
     private void attachmodel() {
 
+        if(selected==1){
+            ModelRenderable.builder()
+                    .setSource(this, Uri.parse("Bed1.sfb.sfb"))
+                    .build().thenAccept(renderable -> {Bed1renderable =renderable;
+                node.setRenderable(renderable);
+                    })
+                    .exceptionally(throwable -> {
+//                        Toast.makeText(this,"Unable to load bed",Toast.LENGTH_SHORT).show();
+                        return null;
+                    });
+//Note: Ther
+        }
 
+        else if(selected==2) {
+            ModelRenderable.builder()
+                    .setSource(this, Uri.parse("Bed2.sfb.sfb"))
+                    .build().thenAccept(renderable -> {Bed2renderable =renderable;
+                     node.setRenderable(renderable); })
+                    .exceptionally(throwable -> {
+//                        Toast.makeText(this, "Unable to load bed", Toast.LENGTH_SHORT).show();
+                        return null;
+                    });
+        }
 
-        ModelRenderable.builder()
-                .setSource(this, Uri.parse("Bed1.sfb.sfb"))
-                .build().thenAccept(renderable -> Bed1renderable =renderable)
-                .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load bed",Toast.LENGTH_SHORT).show();
-                    return null;
-                });
-
-        ModelRenderable.builder()
-                .setSource(this, Uri.parse("Bed2.sfb.sfb"))
-                .build().thenAccept(renderable -> Bed2renderable =renderable)
-                .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load bed",Toast.LENGTH_SHORT).show();
-                    return null;
-                });
+        else if(selected==3) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Bed3.sfb.sfb"))
-                .build().thenAccept(renderable -> Bed3renderable =renderable)
+                .build().thenAccept(renderable -> {Bed3renderable =renderable;
+                       node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load bed",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load bed",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==4) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cabana.sfb.sfb"))
-                .build().thenAccept(renderable -> Bed4renderable =renderable)
+                .build().thenAccept(renderable -> {Bed4renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load bed",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load bed",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==5) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cupb1.sfb.sfb"))
-                .build().thenAccept(renderable -> Cupb1renderable =renderable)
+                .build().thenAccept(renderable -> {Cupb1renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==6) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cupb2.sfb.sfb"))
-                .build().thenAccept(renderable -> Cupb2renderable =renderable)
+                .build().thenAccept(renderable -> {Cupb2renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==7) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cupb3.sfb.sfb"))
-                .build().thenAccept(renderable -> Cupb3renderable =renderable)
+                .build().thenAccept(renderable -> {Cupb3renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==8) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cupb4.sfb.sfb"))
-                .build().thenAccept(renderable -> Cupb4renderable =renderable)
+                .build().thenAccept(renderable -> {Cupb4renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==9) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cupb5.sfb.sfb"))
-                .build().thenAccept(renderable -> Cupb5renderable =renderable)
+                .build().thenAccept(renderable -> {Cupb5renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==10) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cupd6.sfb.sfb"))
-                .build().thenAccept(renderable -> Cupb6renderable =renderable)
+                .build().thenAccept(renderable -> {Cupb6renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==11) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cupb7.sfb.sfb"))
-                .build().thenAccept(renderable -> Cupb7renderable =renderable)
+                .build().thenAccept(renderable -> {Cupb7renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==12) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Cupb8.sfb.sfb"))
-                .build().thenAccept(renderable -> Cupb8renderable =renderable)
+                .build().thenAccept(renderable -> {Cupb8renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load cupboard",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==13) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningSet0.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningSet0renderable =renderable)
+                .build().thenAccept(renderable -> {DiningSet0renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==14) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningSet1.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningSet1renderable =renderable)
+                .build().thenAccept(renderable -> {DiningSet1renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==15) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningSet2.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningSet2renderable =renderable)
+                .build().thenAccept(renderable -> {DiningSet2renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==16) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningSet3.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningSet3renderable =renderable)
+                .build().thenAccept(renderable -> {DiningSet3renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==17) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningSet4.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningSet4renderable =renderable)
+                .build().thenAccept(renderable -> {DiningSet4renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==18) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningSet6.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningSet6renderable =renderable)
+                .build().thenAccept(renderable -> {DiningSet6renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==19) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningSet7.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningSet7renderable =renderable)
+                .build().thenAccept(renderable -> {DiningSet7renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
                     return null;
-                });  ModelRenderable.builder()
+                });}
+        else if(selected==20) {
+              ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningSet8.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningSet8renderable =renderable)
+                .build().thenAccept(renderable -> {DiningSet8renderable =renderable;
+                    node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Set",Toast.LENGTH_SHORT).show();
                     return null;
-                });  ModelRenderable.builder()
+                }); }
+        else if(selected==21) {
+        ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningTable1.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningTable1renderable =renderable)
+                .build().thenAccept(renderable -> {DiningTable1renderable =renderable;
+                    node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==22) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningTable2.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningTable2renderable =renderable)
+                .build().thenAccept(renderable -> {DiningTable2renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==23) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningTable3.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningTable3renderable =renderable)
+                .build().thenAccept(renderable -> {DiningTable3renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==24) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningTable4.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningTable4renderable =renderable)
+                .build().thenAccept(renderable -> {DiningTable4renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==25) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("DiningTable5.sfb.sfb"))
-                .build().thenAccept(renderable -> DiningTable5renderable =renderable)
+                .build().thenAccept(renderable -> {DiningTable5renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Dining Table",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==26) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Armchair1.sfb.sfb"))
-                .build().thenAccept(renderable -> Armchair1renderable =renderable)
+                .build().thenAccept(renderable -> {Armchair1renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Armchair",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Armchair",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==27) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Armchair2.sfb.sfb"))
-                .build().thenAccept(renderable -> Armchair2renderable =renderable)
+                .build().thenAccept(renderable -> {Armchair2renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Armchair",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Armchair",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==28) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Chair1.sfb.sfb"))
-                .build().thenAccept(renderable -> Chair1renderable =renderable)
+                .build().thenAccept(renderable -> {Chair1renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load chair",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load chair",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==29) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Chair3.sfb.sfb"))
-                .build().thenAccept(renderable -> Chair3renderable =renderable)
+                .build().thenAccept(renderable -> {Chair3renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load chair",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load chair",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==30) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Chair4.sfb.sfb"))
-                .build().thenAccept(renderable -> Chair4renderable =renderable)
+                .build().thenAccept(renderable -> {Chair4renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load chair",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load chair",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==31) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Chair5.sfb.sfb"))
-                .build().thenAccept(renderable -> Chair5renderable =renderable)
+                .build().thenAccept(renderable -> {Chair5renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load chair",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load chair",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==32) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("BedsideTable.sfb.sfb"))
-                .build().thenAccept(renderable -> bedsidetablerenderable =renderable)
+                .build().thenAccept(renderable -> {bedsidetablerenderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Bed side Table",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Bed side Table",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==33) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Desk1.sfb.sfb"))
-                .build().thenAccept(renderable -> desk1renderable =renderable)
+                .build().thenAccept(renderable -> {desk1renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load desk",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load desk",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==34) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Desk2.sfb.sfb"))
-                .build().thenAccept(renderable -> desk2renderable =renderable)
+                .build().thenAccept(renderable -> {desk2renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load desk",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load desk",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==35) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Desk3.sfb.sfb"))
-                .build().thenAccept(renderable -> desk3renderable =renderable)
+                .build().thenAccept(renderable -> {desk3renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load desk",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load desk",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==36) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Fan1.sfb.sfb"))
-                .build().thenAccept(renderable -> fan1renderable =renderable)
+                .build().thenAccept(renderable -> {fan1renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Fan",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Fan",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==37) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Fan2.sfb.sfb"))
-                .build().thenAccept(renderable -> fan2renderable =renderable)
+                .build().thenAccept(renderable -> {fan2renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Fan",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Fan",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==38) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Kitchen1.sfb.sfb"))
-                .build().thenAccept(renderable -> kitchen1renderable =renderable)
+                .build().thenAccept(renderable -> {kitchen1renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Kitchen",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Kitchen",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==39) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Kitchen1.sfb.sfb"))
-                .build().thenAccept(renderable -> kitchen2renderable =renderable)
+                .build().thenAccept(renderable -> {kitchen2renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Kitchen",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Kitchen",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==40) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Piano.sfb.sfb"))
-                .build().thenAccept(renderable -> pianorenderable =renderable)
+                .build().thenAccept(renderable -> {pianorenderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load piano",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load piano",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==41) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Stove.sfb.sfb"))
-                .build().thenAccept(renderable -> stoverenderable =renderable)
+                .build().thenAccept(renderable -> {stoverenderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load stove",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load stove",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==42) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("TV.sfb.sfb"))
-                .build().thenAccept(renderable -> tvrenderable =renderable)
+                .build().thenAccept(renderable -> {tvrenderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load TV",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load TV",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==43) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Washing Machine.sfb.sfb"))
-                .build().thenAccept(renderable -> washingmachinerenderable =renderable)
+                .build().thenAccept(renderable -> {washingmachinerenderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Washing machine",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Washing machine",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==44) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa1.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa1renderable =renderable)
+                .build().thenAccept(renderable -> {sofa1renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==45) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa2.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa2renderable =renderable)
+                .build().thenAccept(renderable -> {sofa2renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==46) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa3.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa3renderable =renderable)
+                .build().thenAccept(renderable -> {sofa3renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==47) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa4.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa4renderable =renderable)
+                .build().thenAccept(renderable -> {sofa4renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==48) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa6.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa6renderable =renderable)
+                .build().thenAccept(renderable -> {sofa6renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==49) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa7.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa7renderable =renderable)
+                .build().thenAccept(renderable -> {sofa7renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==50) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa8.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa8renderable =renderable)
+                .build().thenAccept(renderable -> {sofa8renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==51) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa9.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa9renderable =renderable)
+                .build().thenAccept(renderable -> {sofa9renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==52) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa10.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa10renderable =renderable)
+                .build().thenAccept(renderable -> {sofa10renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
+        else if(selected==53) {
         ModelRenderable.builder()
                 .setSource(this, Uri.parse("Sofa11.sfb.sfb"))
-                .build().thenAccept(renderable -> sofa11renderable =renderable)
+                .build().thenAccept(renderable -> {sofa11renderable =renderable;
+            node.setRenderable(renderable); })
                 .exceptionally(throwable -> {
-                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this,"Unable to load Sofa",Toast.LENGTH_SHORT).show();
                     return null;
-                });
+                });}
     }
 
 
@@ -844,6 +968,7 @@ public class previewmodelactivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        Log.d(TAG, "onResume:");
 //        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
 //                != PackageManager.PERMISSION_GRANTED)
 //            ActivityCompat.requestPermissions(this,
@@ -858,11 +983,13 @@ public class previewmodelactivity extends AppCompatActivity {
     protected void onPause(){
         super.onPause();
         sceneView.pause();
+        Log.d(TAG, "onPause:");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         sceneView.destroy();
+        Log.d(TAG, "onDestroy:");
     }
 }

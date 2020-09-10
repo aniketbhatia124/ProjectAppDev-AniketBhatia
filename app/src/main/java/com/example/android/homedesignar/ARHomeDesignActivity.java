@@ -7,7 +7,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -122,6 +124,7 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
 //        Config config= new Config(session);
 //        config.setFocusMode(Config.FocusMode.AUTO);
 //        session.configure(config);
+        Switch switchshare = findViewById(R.id.switchshare);
 
 
         Bed1= findViewById(R.id.Bed1);
@@ -191,7 +194,20 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
         resolveButton= findViewById(R.id.resolve);
 
 
+        switchshare.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    hostbutton.setVisibility(View.VISIBLE);
+                    resolveButton.setVisibility(View.VISIBLE);
+                }
+                else {
+                    hostbutton.setVisibility(View.INVISIBLE);
+                    resolveButton.setVisibility(View.INVISIBLE);
+                }
 
+            }
+        });
 
 
         layout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
@@ -209,13 +225,23 @@ public class ARHomeDesignActivity extends AppCompatActivity implements View.OnCl
                     clearbutton.setVisibility(View.INVISIBLE);
                     hostbutton.setVisibility(View.INVISIBLE);
                     resolveButton.setVisibility(View.INVISIBLE);
+                    switchshare.setVisibility(View.INVISIBLE);
 
                 }
                 else if(layout.getPanelState()==SlidingUpPanelLayout.PanelState.COLLAPSED){
                     pullup.setText("TAP HERE TO OPEN");
                     clearbutton.setVisibility(View.VISIBLE);
-                    hostbutton.setVisibility(View.VISIBLE);
-                    resolveButton.setVisibility(View.VISIBLE);
+                    switchshare.setVisibility(View.VISIBLE);
+                    if(switchshare.isChecked()){
+                        hostbutton.setVisibility(View.VISIBLE);
+                        resolveButton.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        hostbutton.setVisibility(View.INVISIBLE);
+                        resolveButton.setVisibility(View.INVISIBLE);
+                    }
+
+
 
                 }
             }
